@@ -1,0 +1,180 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\.6aa5234b491764cd5013105641dc34db277c8ed1-audit.json",
+    "files": [
+        {
+            "date": 1697233060936,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-13-10-23-error.log",
+            "hash": "291b1942ad731c804ab7168d4cd4475d93eb78e30a1323b49c8bf8d0120dbe38"
+        },
+        {
+            "date": 1697235577837,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-14-10-00-error.log",
+            "hash": "30e191450f4bec57cd1c01524a01b66f89a41aff531d551a1e07712448c1ebde"
+        },
+        {
+            "date": 1697238037115,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-14-10-01-error.log",
+            "hash": "f622ce787753b29eb24fb8a4afe1314afd1a0de948547ed50ba6161751379ffe"
+        },
+        {
+            "date": 1697277175135,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-14-10-11-error.log",
+            "hash": "a989ff666fdc10d528c4100c887522bef8897a25b3b69d9d51a6f6c2df476456"
+        },
+        {
+            "date": 1697283942131,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-14-10-13-error.log",
+            "hash": "250d63636bf8bb2bdeea6dd6824674844d0409a1527d605b9bcb38395bcaab79"
+        },
+        {
+            "date": 1697284862356,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-14-10-14-error.log",
+            "hash": "a94b8399f6e906aceafa0430d27bebe678f2e308df372e2d6d10f926ad9a8873"
+        },
+        {
+            "date": 1697288408020,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-14-10-15-error.log",
+            "hash": "5e736fc3157145d83ff83a5617874fc1eb92bb6644ef51c78db2dba6e6a323fe"
+        },
+        {
+            "date": 1697292004526,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-14-10-16-error.log",
+            "hash": "aee6640b16ef9b743b4550ca99cfd6a2c2cc09937a3688b8cbc2936b83be7ab4"
+        },
+        {
+            "date": 1697306461880,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-14-10-20-error.log",
+            "hash": "74e95f77c72905ad9b7500a3a7db0fa9370a79f2921dcafc0b93d6d8e58e798a"
+        },
+        {
+            "date": 1697310127758,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-14-10-21-error.log",
+            "hash": "c2e8748c349a8961a2c0dc035022c82e816c00aa5d4da87bf07ee404ba97660d"
+        },
+        {
+            "date": 1697318863756,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-14-10-23-error.log",
+            "hash": "df954b60bf37d15dcb885cc86fa42bce1cff6fc120586fc79607edff6dd12ce1"
+        },
+        {
+            "date": 1697320861019,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-15-10-00-error.log",
+            "hash": "edb42964001548dee02f0fa6ba022cbda40046156b11f0a91c38254a15f246a0"
+        },
+        {
+            "date": 1697324404464,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-15-10-01-error.log",
+            "hash": "9c4d17e905024c6c5b13714b934a277f78196ddcc7da8d7b670f0a46c43078b8"
+        },
+        {
+            "date": 1697328068540,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-15-10-02-error.log",
+            "hash": "5c3cb2608f2993f6f8080262b5b3fa4aecd30e8d634238999173bb0dead603e7"
+        },
+        {
+            "date": 1697365308631,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-15-10-12-error.log",
+            "hash": "e39f55d6a2994788eaf558e8cba6a2ba1ee77fbc75293d052b04a6e29018be35"
+        },
+        {
+            "date": 1697367696831,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-15-10-13-error.log",
+            "hash": "53865070ae2b9a5db81a4132c9e8afeb675a1b64762abaebc2f2a695607366a6"
+        },
+        {
+            "date": 1697371278322,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-15-10-14-error.log",
+            "hash": "fd8a943ef0c380f6280b84d56596abac473de90e966cf902f1514fab05da7b01"
+        },
+        {
+            "date": 1697375009027,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-15-10-15-error.log",
+            "hash": "cdb8309095d40156bc109af7fe9093676d86f5c5251dfc9a967a036944ad6d77"
+        },
+        {
+            "date": 1697378411136,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-15-10-16-error.log",
+            "hash": "2979a94a0d5bbdfecbf7ace684ebaa6a22aee1cf08342eefe33390179a656de8"
+        },
+        {
+            "date": 1697382059175,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-15-10-17-error.log",
+            "hash": "edd4c524a3d44cabcb9b09e1afa5763bbc6be484af53d72aba9273de3c2789e7"
+        },
+        {
+            "date": 1697402167773,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-15-10-22-error.log",
+            "hash": "d82668f1036ab005a5220c2c7826d590b18739567a589655e19c87d0ddf53ed5"
+        },
+        {
+            "date": 1697403600688,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-15-10-23-error.log",
+            "hash": "2db59ee149046efd759caa24d6df4c71e1d7fb99309e311562692e9411204411"
+        },
+        {
+            "date": 1697407201049,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-16-10-00-error.log",
+            "hash": "685013d27882251006c955f3571654c37bae2af504c336aa2fb8fe5fdd87168b"
+        },
+        {
+            "date": 1697410902878,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-16-10-01-error.log",
+            "hash": "fa13a48e6ac0f1ec14e6d3a963f8952afeb3e064e35878c3e0d5dccb6a8919c0"
+        },
+        {
+            "date": 1697414554316,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-16-10-02-error.log",
+            "hash": "2d3dc8fa217c28f01970b4a7144ffe65b8e9aa2d5f8978edaf9861fc715ad888"
+        },
+        {
+            "date": 1697419817004,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-16-10-03-error.log",
+            "hash": "79f6d57e88848f12fbdfeace9a4e68f4116c2b31bce59ef09c94fd5fd9e4c3e9"
+        },
+        {
+            "date": 1697421612631,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-16-10-04-error.log",
+            "hash": "05db1ef0b006b5ab5637d29bccbd002cadc3e3e8877d79fd3d0fade317dbac9e"
+        },
+        {
+            "date": 1697425748402,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-16-10-05-error.log",
+            "hash": "013c32580cd5d18c98e8a94406359c5eed8100188fb1415cac09e0691fc1302c"
+        },
+        {
+            "date": 1697429453227,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-16-10-06-error.log",
+            "hash": "83da87f3d3cadf0b6d8a0a86dc1ddfdd2f68aa15d43e0be833375fb52a61286c"
+        },
+        {
+            "date": 1697434471230,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-16-10-07-error.log",
+            "hash": "53a3fea43779821f947e06c0f46915e04b8e8b3fd8c4dfc3fa46530b4bf24f77"
+        },
+        {
+            "date": 1697453121553,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-16-10-12-error.log",
+            "hash": "f2b3763907f21fed7620c8b83e960311099d76558c9a866fb5c0479b7e7280c3"
+        },
+        {
+            "date": 1697454048946,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-16-10-13-error.log",
+            "hash": "6c7313c92361b9f1f3e26e4946739e23b1231e54ed2fed6164836036a0fc275e"
+        },
+        {
+            "date": 1697457772677,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-16-10-14-error.log",
+            "hash": "fbf63b4b01d0bac06e67d114c41b832b167627892071a3bd7cbbf3b9f9ffb61f"
+        },
+        {
+            "date": 1697461201152,
+            "name": "J:\\2ndLevel\\finalAssignment\\travel-ageny-backend\\logs\\winston\\errors\\phu-2023-16-10-15-error.log",
+            "hash": "32994167574e532f7e9c7f745f8f8794a27724a2c6bc7666b545ed0ffa8a9a63"
+        }
+    ],
+    "hashType": "sha256"
+}
