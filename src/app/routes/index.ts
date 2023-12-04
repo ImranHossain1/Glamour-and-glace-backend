@@ -2,6 +2,7 @@ import express from 'express';
 import { AdminRoutes } from '../modules/admin/admin.route';
 import { AuthRoutes } from '../modules/auth/auth.route';
 import { CategoryRoutes } from '../modules/category/category.route';
+import { MakeoverServiceRoutes } from '../modules/makeoverService/makeoverService.route';
 import { UserProfileRoutes } from '../modules/profile/profile.route';
 
 const router = express.Router();
@@ -20,6 +21,10 @@ const moduleRoutes = [
   {
     path: '/category',
     route: CategoryRoutes,
+  },
+  {
+    path: '/makeover-service',
+    route: MakeoverServiceRoutes,
   },
 ];
 
