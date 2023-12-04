@@ -1,12 +1,13 @@
 import express from 'express';
 import { AdminRoutes } from '../modules/admin/admin.route';
 import { AuthRoutes } from '../modules/auth/auth.route';
+import { BlogRoutes } from '../modules/blog/blog.route';
 import { BookingRoutes } from '../modules/booking/booking.route';
 import { CategoryRoutes } from '../modules/category/category.route';
+import { FeedbackRoutes } from '../modules/feedback/feedback.route';
 import { MakeoverServiceRoutes } from '../modules/makeoverService/makeoverService.route';
 import { UserProfileRoutes } from '../modules/profile/profile.route';
 import { ReviewAndRatingRoutes } from '../modules/reviewAndRating/reviewAndRating.route';
-import { FeedbackRoutes } from '../modules/feedback/feedback.route';
 
 const router = express.Router();
 
@@ -36,9 +37,14 @@ const moduleRoutes = [
   {
     path: '/review',
     route: ReviewAndRatingRoutes,
-  },{
+  },
+  {
     path: '/feedback',
     route: FeedbackRoutes,
+  },
+  {
+    path: '/blog',
+    route: BlogRoutes,
   },
 ];
 
