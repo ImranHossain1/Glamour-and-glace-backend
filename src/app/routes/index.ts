@@ -8,6 +8,7 @@ import { FeedbackRoutes } from '../modules/feedback/feedback.route';
 import { MakeoverServiceRoutes } from '../modules/makeoverService/makeoverService.route';
 import { UserProfileRoutes } from '../modules/profile/profile.route';
 import { ReviewAndRatingRoutes } from '../modules/reviewAndRating/reviewAndRating.route';
+import { FAQRoutes } from '../modules/faq/faq.route';
 
 const router = express.Router();
 
@@ -45,6 +46,10 @@ const moduleRoutes = [
   {
     path: '/blog',
     route: BlogRoutes,
+  },
+  {
+    path: '/faq',
+    route: FAQRoutes,
   },
 ];
 
