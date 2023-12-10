@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-const create = z.object({
-  body: z.object({
+const createCategory = z.object({
+  category: z.object({
     title: z.string({
       required_error: 'Title is required',
     }),
@@ -15,9 +15,8 @@ const create = z.object({
     ),
   }),
 });
-
-const update = z.object({
-  body: z.object({
+const updateCategory = z.object({
+  category: z.object({
     title: z.string().optional(),
     information: z
       .array(
@@ -30,6 +29,6 @@ const update = z.object({
 });
 
 export const CategoryValidation = {
-  create,
-  update,
+  updateCategory,
+  createCategory,
 };

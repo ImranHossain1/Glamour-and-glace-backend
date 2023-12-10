@@ -143,6 +143,7 @@ const getMyBookings = async (userId: string): Promise<Booking[]> => {
         },
       },
       user: true,
+      reviewAndRating: true,
     },
   });
   return result;
@@ -199,9 +200,9 @@ const getBookingsByDate = async (date: string): Promise<Partial<Booking>[]> => {
     where: {
       date: date,
     },
-    select: {
-      startTime: true,
-      endTime: true,
+    include: {
+      user: true,
+      makeoverService: true,
     },
   });
   return result;

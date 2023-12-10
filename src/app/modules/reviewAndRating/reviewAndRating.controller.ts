@@ -8,7 +8,12 @@ import { ReviewAndRatingService } from './reviewAndRating.service';
 const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
   const user = (req as any).user;
   const payload = req?.body;
-  const result = await ReviewAndRatingService.insertIntoDB(payload, user.email);
+  const id = req.params?.id;
+  const result = await ReviewAndRatingService.insertIntoDB(
+    payload,
+    user.email,
+    id
+  );
   sendResponse<ReviewAndRating>(res, {
     success: true,
     statusCode: httpStatus.OK,

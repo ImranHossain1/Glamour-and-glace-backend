@@ -1,11 +1,34 @@
-import { Category, Prisma } from '@prisma/client';
+import { Category } from '@prisma/client';
+import { Request } from 'express';
+import { FileUploadHelper } from '../../../helpers/FileUploadHelper';
+import { IUploadFile } from '../../../interfaces/file';
 import { prisma } from '../../../shared/prisma';
+const insertIntoDB = async (req: Request): Promise<Category> => {
+  const file = req.file as IUploadFile;
+  const uploadedImage = await FileUploadHelper.uploadToCloudinary(file);
 
-const insertIntoDB = async (
-  payload: Prisma.CategoryCreateInput
-): Promise<Category> => {
+  if (uploadedImage) {
+    req.body.category.image = uploadedImage.secure_url;
+  }
+
   const result = await prisma.category.create({
-    data: payload,
+    data: req.body.category,
+  });
+  return result;
+};
+const updateData = async (id: string, req: Request): Promise<Category> => {
+  const file = req.file as IUploadFile;
+  const uploadedImage = await FileUploadHelper.uploadToCloudinary(file);
+
+  if (uploadedImage) {
+    req.body.category.image = uploadedImage.secure_url;
+  }
+
+  const result = await prisma.category.update({
+    where: {
+      id,
+    },
+    data: req.body.category,
   });
   return result;
 };
@@ -27,19 +50,6 @@ const getDataById = async (id: string): Promise<Category | null> => {
     include: {
       makeoverServices: true,
     },
-  });
-  return result;
-};
-
-const updateData = async (
-  id: string,
-  payload: Partial<Prisma.CategoryUpdateInput>
-): Promise<Category> => {
-  const result = await prisma.category.update({
-    where: {
-      id,
-    },
-    data: payload,
   });
   return result;
 };

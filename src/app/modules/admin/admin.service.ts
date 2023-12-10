@@ -1,4 +1,5 @@
 import { User, UserRole } from '@prisma/client';
+import bcrypt from 'bcryptjs';
 import httpStatus from 'http-status';
 import { JwtPayload } from 'jsonwebtoken';
 import ApiError from '../../../errors/ApiError';
@@ -114,7 +115,7 @@ const addNewAdmin = async (payload: User): Promise<Partial<User>> => {
   }
 
   payload.role = UserRole.admin;
-
+  payload.password = bcrypt.hashSync(payload.password, 12);
   const result = await prisma.user.create({
     data: payload,
   });

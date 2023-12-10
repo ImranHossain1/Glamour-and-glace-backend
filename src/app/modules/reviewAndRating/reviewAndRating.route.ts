@@ -9,7 +9,7 @@ import validateRequest from '../../middlewares/validateRequest';
 const router = express.Router();
 
 router.post(
-  '/',
+  '/:id',
   auth(ENUM_USER_ROLE.CLIENT),
   validateRequest(ReviewAndRatingValidation.create),
   ReviewAndRatingController.insertIntoDB

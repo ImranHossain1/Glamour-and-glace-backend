@@ -6,8 +6,9 @@ import sendResponse from '../../../shared/sendResponse';
 import { FeedbackService } from './feedback.service';
 
 const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
+  const email = req.user?.email;
   const payload = req?.body;
-  const result = await FeedbackService.insertIntoDB(payload);
+  const result = await FeedbackService.insertIntoDB(email, payload);
   sendResponse<Feedback>(res, {
     success: true,
     statusCode: httpStatus.OK,

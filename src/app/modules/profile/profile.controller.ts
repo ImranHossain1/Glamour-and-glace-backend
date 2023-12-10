@@ -26,6 +26,7 @@ const getSingleUserProfile = catchAsync(async (req: Request, res: Response) => {
 });
 const updateOneInDB = catchAsync(async (req: Request, res: Response) => {
   const id = req.user?.email;
+  
   const result = await UserProfileService.updateUserProfile(id, req.body);
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -38,5 +39,5 @@ const updateOneInDB = catchAsync(async (req: Request, res: Response) => {
 export const UserProfileController = {
   getUsersProfile,
   updateOneInDB,
-  getSingleUserProfile
+  getSingleUserProfile,
 };

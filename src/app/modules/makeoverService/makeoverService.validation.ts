@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-const create = z.object({
-  body: z.object({
+const createMakeover = z.object({
+  makeover: z.object({
     title: z.string({
       required_error: 'Title is required',
     }),
@@ -16,16 +16,14 @@ const create = z.object({
         required_error: 'Information are required',
       }
     ),
-    image: z.string().optional(),
     availability: z.boolean().optional(),
     categoryId: z.string({
       required_error: 'Category Id is required',
     }),
   }),
 });
-
-const update = z.object({
-  body: z.object({
+const updateMakeover = z.object({
+  makeover: z.object({
     title: z.string().optional(),
     price: z.number().optional(),
     information: z
@@ -42,6 +40,6 @@ const update = z.object({
 });
 
 export const MakeoverServiceValidation = {
-  create,
-  update,
+  createMakeover,
+  updateMakeover,
 };

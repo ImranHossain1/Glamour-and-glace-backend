@@ -5,19 +5,22 @@ import { prisma } from '../../../shared/prisma';
 
 const insertIntoDB = async (
   payload: ReviewAndRating,
-  userId: string
+  userId: string,
+  id: string
 ): Promise<ReviewAndRating> => {
-  const alreadyReviewed = await prisma.reviewAndRating.findFirst({
+  const user = await prisma.user.findUnique({
     where: {
-      makeoverServiceId: payload?.makeoverServiceId,
-      userId: userId,
+      email: userId,
     },
   });
-  if (alreadyReviewed)
-    throw new ApiError(
-      httpStatus.BAD_REQUEST,
-      'We already received your review'
-    );
+
+  if (!user) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'User not Found');
+  }
+
+  payload.bookingId = id;
+  payload.userId = user.id;
+
   const result = await prisma.reviewAndRating.create({
     data: payload,
   });

@@ -1,14 +1,44 @@
 import { MakeoverService, Prisma } from '@prisma/client';
-
+import { Request } from 'express';
+import { FileUploadHelper } from '../../../helpers/FileUploadHelper';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
+import { IUploadFile } from '../../../interfaces/file';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import { prisma } from '../../../shared/prisma';
 import { makeoverServiceSearchableFields } from './makeoverService.constants';
 
-const insertIntoDB = async (payload: any) => {
+const insertIntoDB = async (req: Request): Promise<MakeoverService> => {
+  const file = req.file as IUploadFile;
+  const uploadedImage = await FileUploadHelper.uploadToCloudinary(file);
+
+  if (uploadedImage) {
+    req.body.makeover.image = uploadedImage.secure_url;
+  }
+
   const result = await prisma.makeoverService.create({
-    data: payload,
+    data: req.body.makeover,
+  });
+  return result;
+};
+const updateData = async (
+  id: string,
+  req: Request
+): Promise<MakeoverService> => {
+  if (req.file !== undefined) {
+    const file = req.file as IUploadFile;
+    const uploadedImage = await FileUploadHelper.uploadToCloudinary(file);
+
+    if (uploadedImage) {
+      req.body.makeover.image = uploadedImage.secure_url;
+    }
+  }
+
+  const result = await prisma.makeoverService.update({
+    where: {
+      id,
+    },
+    data: req.body.makeover,
   });
   return result;
 };
@@ -84,26 +114,17 @@ const getDataById = async (id: string): Promise<MakeoverService | null> => {
       id,
     },
     include: {
-      reviewAndRatings: {
+      bookings: {
         include: {
-          user: true,
+          reviewAndRating: {
+            include: {
+              user: true,
+            },
+          },
         },
       },
       category: true,
     },
-  });
-  return result;
-};
-
-const updateData = async (
-  id: string,
-  payload: any
-): Promise<MakeoverService> => {
-  const result = await prisma.makeoverService.update({
-    where: {
-      id,
-    },
-    data: payload,
   });
   return result;
 };
@@ -129,9 +150,13 @@ const getByCategory = async (
     skip,
     take: size,
     include: {
-      reviewAndRatings: {
+      bookings: {
         include: {
-          user: true,
+          reviewAndRating: {
+            include: {
+              user: true,
+            },
+          },
         },
       },
     },

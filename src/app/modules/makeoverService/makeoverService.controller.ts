@@ -9,11 +9,21 @@ import { makeoverServiceFilterableFields } from './makeoverService.constants';
 import { MakeoverServiceService } from './makeoverService.service';
 
 const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
-  const result = await MakeoverServiceService.insertIntoDB(req.body);
+  const result = await MakeoverServiceService.insertIntoDB(req);
   sendResponse<MakeoverService>(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: 'Service created successfully',
+    message: 'Category created successfully',
+    data: result,
+  });
+});
+
+const updateData = catchAsync(async (req: Request, res: Response) => {
+  const result = await MakeoverServiceService.updateData(req.params.id, req);
+  sendResponse<MakeoverService>(res, {
+    success: true,
+    statusCode: httpStatus.OK,
+    message: 'Category updated successfully',
     data: result,
   });
 });
@@ -36,19 +46,6 @@ const getDataById = catchAsync(async (req: Request, res: Response) => {
     success: true,
     statusCode: httpStatus.OK,
     message: 'Service fetched successfully',
-    data: result,
-  });
-});
-
-const updateData = catchAsync(async (req: Request, res: Response) => {
-  const result = await MakeoverServiceService.updateData(
-    req.params.id,
-    req.body
-  );
-  sendResponse<MakeoverService>(res, {
-    success: true,
-    statusCode: httpStatus.OK,
-    message: 'Service updated successfully',
     data: result,
   });
 });
