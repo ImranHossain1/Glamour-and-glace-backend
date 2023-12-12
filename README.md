@@ -6,17 +6,21 @@
 
 ## Authentication:
 
-    ```bash
-        # Super Admin Login:
-        email: imran@gmail.com
-        password: admin123
-    ```
+1. Super Admin Authentication:
 
-    ```bash
-        #Admin Login:
-        email: helal@gmail.com
-        password: admin123
-    ```
+```bash
+      email: imran@gmail.com
+      password: admin123
+```
+
+2. Admin Authentication:
+
+```bash
+    email: helal@gmail.com
+    password: admin123
+```
+
+3. User Authentication: You can Create a New Account
 
 # Pristine Perfection
 
