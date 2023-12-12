@@ -6,13 +6,14 @@
 
 ## Authentication:
 
-    ### Super Admin
     ```bash
+        # Super Admin Login:
         email: imran@gmail.com
         password: admin123
     ```
-    ### Admin
+
     ```bash
+        #Admin Login:
         email: helal@gmail.com
         password: admin123
     ```
